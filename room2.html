@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="detail2.css">
+	<title>전이의 공간</title>
+</head>
+<body>
+	<section class="interactive-section">
+		<div class="interactive-container">
+			
+			<!-- 왼쪽: 클릭할 문장 목록 -->
+			<ul class="sentence-list">
+				<li class="sentence-item" data-text="억압은 고통스러운 기억을 의식에서 밀어내는 방어기제입니다.">억압</li>
+				<li class="sentence-item" data-text="부인은 현실의 일부를 인정하지 않으려는 심리입니다.">부인</li>
+				<li class="sentence-item" data-text="투사는 자신의 감정을 타인에게 돌리는 것입니다.">투사</li>
+				<li class="sentence-item" data-text="퇴행은 스트레스 상황에서 어린 시절로 돌아가는 행동입니다.">퇴행</li>
+				<li class="sentence-item" data-text="승화는 부정적 충동을 긍정적 활동으로 전환하는 것입니다.">승화</li>
+			</ul>
+			
+			<!-- 오른쪽: 사람 모양 SVG + 원형 텍스트 영역 -->
+			<div class="person-area">
+				<!-- SVG 자리 (나중에 교체) -->
+				<div class="person-placeholder">
+					<svg viewBox="0 0 100 150" class="person-svg">
+						<!-- 임시 사람 형태 -->
+						<circle cx="50" cy="25" r="20" fill="#333"/>
+						<ellipse cx="50" cy="90" rx="30" ry="50" fill="#333"/>
+					</svg>
+				</div>
+				
+				<!-- 원형 텍스트 영역 -->
+				<div class="text-circle">
+					<p class="display-text">왼쪽 항목을 클릭하세요</p>
+				</div>
+			</div>
+			
+		</div>
+	</section>
+	
+	<a href="index.html" class="back-btn">←</a>
+	<section>
+		<div class="wrap">
+			<h4>심리학 (전이, transference): 내담자가 과거의 중요한 타인(주로 부모나 어린 시절의 인물)에게 느꼈던 무의식적인 감정, 욕망, 환상 등을 현재 만나는 상담자나 치료자에게 무의식적으로 옮겨 투사하는 현상을 의미합니다.
+			</h4>
+		</div>
+	</section>
+	<section>
+		<div class="wrap">
+			<img src="https://media.giphy.com/media/l2JJJKp6HNxv6gW9G/giphy.gif?cid=790b7611fefbabd257a316bd944e62f2c3f44aaf1a21d459&ep=v1_user_favorites&rid=giphy.gif&ct=g">
+		</div>
+	</section>
+</body>
+</html>
+<script>
+    const items = document.querySelectorAll('.sentence-item');
+    const displayText = document.querySelector('.display-text');
+    
+    items.forEach(item => {
+        item.addEventListener('click', function() {
+            // 모든 항목에서 active 제거
+            items.forEach(i => i.classList.remove('active'));
+            
+            // 클릭한 항목에 active 추가
+            this.classList.add('active');
+            
+            // 원형 안 텍스트 변경
+            displayText.textContent = this.dataset.text;
+        });
+    });
+</script>

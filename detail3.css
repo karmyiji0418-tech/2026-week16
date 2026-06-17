@@ -1,0 +1,97 @@
+@import url('fonts.css');
+
+html {
+	font-family: 'BookkGothic';
+	font-weight: 700;
+	font-size: 16px;
+	line-height: 1.5;
+	word-break: keep-all;
+}
+
+body,h1,h2,h3,h4,p,ul {
+	margin: 0px;
+	padding: 0px;
+}
+
+section {
+	background: #fff;
+	padding: 100px 0px 120px;
+}
+
+h1 {
+	font-size: 4.5rem;
+	font-weight: 700;
+	line-height: 1.4;
+	margin: 20px 0px 30px;
+}
+
+h2 {
+	font-family: 'BookkMyungjo';
+	font-size: 4.5rem;
+	font-weight: 700;
+	line-height: 1.4;
+	margin: 20px 0px 30px;
+}
+
+h3 {
+	font-family: 'BookkMyungjo';
+	font-size: 2.5rem;
+	font-weight: 700;
+}
+
+/* 텍스트 호버 */
+h4 {
+	font-family: 'BookkMyungjo';
+	font-size: 1rem;
+	font-weight: 700;
+	line-height: 1.6;
+}
+
+p {
+	font-family: 'BookkGothic';
+	font-size: 1.5rem;
+	font-weight: 700;
+	line-height: 2;
+}
+
+.wrap {
+	width: 1300px;
+	margin: auto;
+	position: relative;
+}
+
+/* 까맣게 가려진 텍스트 */
+.blackout {
+    font-family: 'BookkMyungjo';
+    background-color: #111;
+    color: #111; /* 글자색도 검정 → 안 보임 */
+    transition: all 0.3s ease;
+}
+
+/* 드래그(선택) 시 글자가 보임 */
+.blackout::selection {
+    background-color: #0037ff;
+    color: white;
+}
+
+/* Firefox 대응 */
+.blackout::-moz-selection {
+    background-color: #0037ff;
+    color: white;
+}
+
+
+.back-btn {
+	position: fixed;
+	right: 110px;
+	bottom: 80px;
+	font-size: 4rem;
+	text-decoration: none;
+	color: black;
+	z-index: 9999;
+	transition: transform 0.3s;
+}
+
+.back-btn:hover {
+	transform: translateX(-8px);
+}

@@ -1,0 +1,163 @@
+@import url('fonts.css');
+
+html {
+	font-family: 'BookkGothic';
+	font-weight: 700;
+	font-size: 16px;
+	line-height: 1.5;
+	word-break: keep-all;
+}
+
+body,h1,h2,h3,h4,p,ul {
+	margin: 0px;
+	padding: 0px;
+}
+
+section {
+	background: #fff;
+	padding: 200px 0px;
+}
+
+h1 {
+	font-size: 4.5rem;
+	font-weight: 700;
+	line-height: 1.4;
+	margin: 20px 0px 30px;
+}
+
+h2 {
+	font-family: 'BookkMyungjo';
+	font-size: 2.5rem;
+	font-weight: 700;
+	line-height: 1.4;
+	margin: 20px 0px 30px;
+}
+
+h3 {
+	font-family: 'BookkMyungjo';
+	font-size: 2.5rem;
+	font-weight: 700;
+}
+
+/* 텍스트 호버 */
+h4 {
+	font-family: 'BookkMyungjo';
+	font-size: 1rem;
+	font-weight: 700;
+	line-height: 1.6;
+}
+
+p {
+	font-family: 'BookkGothic';
+	font-size: 1.5rem;
+	font-weight: 700;
+	line-height: 2;
+}
+
+.wrap {
+	width: 800px;
+	margin: auto;
+	position: relative;
+}
+
+.interactive-section {
+    background: #f2f2f2;
+    padding: 100px 50px;
+}
+
+.interactive-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* 왼쪽 문장 목록 */
+.sentence-list {
+    list-style: none;
+    padding: 0;
+}
+
+.sentence-item {
+    font-size: 1.5rem;
+    padding: 15px 20px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    border-left: 4px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.sentence-item:hover {
+    border-left: 4px solid #0037ff;
+    background: rgba(0, 55, 255, 0.1);
+}
+
+.sentence-item.active {
+    border-left: 4px solid #0037ff;
+    color: #0037ff;
+    font-weight: 700;
+}
+
+/* 오른쪽 영역 */
+.person-area {
+    position: relative;
+    width: 400px;
+    height: 400px;
+}
+
+.person-placeholder {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+.person-svg {
+    width: 150px;
+    height: 200px;
+}
+
+/* 원형 텍스트 영역 */
+.text-circle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+    width: 350px;
+    height: 350px;
+    border: 3px solid #333;
+    border-radius: 50%;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 50px;
+    box-sizing: border-box;
+}
+
+.display-text {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #333;
+}
+
+
+.back-btn {
+	position: fixed;
+	right: 110px;
+	bottom: 80px;
+	font-size: 4rem;
+	text-decoration: none;
+	color: black;
+	z-index: 9999;
+	transition: transform 0.3s;
+}
+
+.back-btn:hover {
+	transform: translateX(-8px);
+}

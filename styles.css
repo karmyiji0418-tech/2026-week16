@@ -1,0 +1,608 @@
+@import url('fonts.css');
+
+html {
+	font-family: 'BookkGothic';
+	font-weight: 700;
+	font-size: 16px;
+	line-height: 1.5;
+	word-break: keep-all;
+}
+
+body,h1,h2,h3,h4,p,ul {
+	margin: 0px;
+	padding: 0px;
+}
+
+section {
+	background: #fff;
+	padding: 200px 0px;
+}
+
+h1 {
+	font-size: 4.5rem;
+	font-weight: 700;
+	line-height: 1.4;
+	margin: 20px 0px 30px;
+}
+
+h2 {
+	font-family: 'BookkMyungjo';
+	font-size: 2.5rem;
+	font-weight: 700;
+	line-height: 1.4;
+	margin: 20px 0px 30px;
+}
+
+h3 {
+	font-family: 'BookkMyungjo';
+	font-size: 2.5rem;
+	font-weight: 700;
+}
+
+/* 텍스트 호버 */
+h4 {
+	font-family: 'BookkMyungjo';
+	font-size: 1rem;
+	font-weight: 300;
+	line-height: 1.4;
+}
+
+p {
+	font-family: 'BookkGothic';
+	font-size: 1.5rem;
+	font-weight: 700;
+	line-height: 2;
+}
+footer {
+	padding: 60px 0 45px;
+	color: white;
+}
+
+.wrap {
+	width: 1400px;
+	margin: auto;
+	position: relative;
+}
+
+nav {
+	background-color: #ff00d8;
+	position: fixed;
+	justify-content: space-between;
+	width: 100%;
+	padding: 5px 25px;
+	box-sizing: border-box;
+	z-index: 100;
+	top: 0;
+}
+
+nav a {
+	text-decoration: none;
+	color: #111;
+}
+
+nav ul li a {
+	text-decoration: none;
+	display: block;
+	color: #111;
+	padding: 7px 18px;
+	border-radius: 5px;
+}
+
+nav ul li a:hover {
+	color: whitesmoke;
+	background: #111;
+}
+
+nav > .flex {
+	position: relative;
+}
+
+ul {
+	list-style: none;
+	padding: 10px 0px;
+}
+
+ul.flex {
+	gap: 15px;
+	white-space: nowrap;
+}
+
+.flex {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.bg-white {
+	background: whitesmoke;
+}
+
+.bg-black {
+	background: #111;
+}
+
+.bg-word {
+	background-color: #ff00d8;
+	background-blend-mode: multiply;
+	background-image: url(https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExeXM2ZXNhY3oxbHVwNm1rMG5yaTZsNTRsMG00bmhxcXYxbzFiMGtkYiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3ov9jLj1vtlP2EVq3C/giphy.gif);
+	background-size: 425px auto;
+	background-attachment: fixed;
+	color: white;
+}
+
+.bg-clock {
+	background: url();
+	background-blend-mode: multiply;
+	background-size: 450px;
+	background-color: #ff00d8;
+	width: 100%;
+	height: 100vh; /* 브라우저 화면 높이에 꽉 차게 설정 */
+	padding: 150px 0;
+}
+.header {
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 1700px;
+	top: -60px;
+}
+
+.clock {
+	position: relative; 
+	width: 900px;
+	height: 900px;
+	background-color: #fff; 
+	border-radius: 50%;
+	margin: auto;
+	}
+
+	.clock-people {
+		position: absolute;
+		top: 325px;
+		left: 330px;
+		width: 200px; 
+		transform-origin: 70% 90%; 
+		animation: clock-spin 15s linear infinite;
+		margin-top: -250px; /* 이미지 높이만큼 위로 당김 */
+	}
+	
+	.clock-finger {
+		position: absolute;
+		top: 339px;
+		left: 315px;
+		width: 160px; 
+		transform-origin: 90% 100%; 
+		animation: clock-spin 30s linear infinite;
+		margin-top: -250px; /* 이미지 높이만큼 위로 당김 */
+	}
+
+	.clock-red {
+		position: absolute;
+		top: 670px;
+		left: 95px;
+		width: 390px; 
+		transform-origin: 93% 50%; 
+		animation: clock-spin 30s linear infinite;
+		margin-top: -250px; /* 이미지 높이만큼 위로 당김 */
+	}
+	
+	@keyframes clock-spin {
+		0% {
+			transform: rotate(0deg); /* 12시 방향에서 시작 */
+		}
+		100% {
+			transform: rotate(360deg); /* 한 바퀴 꽉 채워서 회전 */
+		}
+	}
+
+.right-spacing {
+	text-align: right;
+}
+
+.center-spacing {
+	text-align: center;
+}
+
+.defense-text {
+	position: absolute;
+/* 부드럽게 밀려나도록 transform에 애니메이션 추가 */
+	transition: transform 0.4s ease-out; 
+	cursor: default;
+}
+
+.text-1 {
+	top: 63%;
+	left: 56%;
+	width: 30%;
+	transform: rotate(-8deg);
+}
+
+.text-2 {
+	top: 78%;
+	left: 30%;
+	transform: rotate(8deg);
+}
+
+.text-3 {
+	top: 50%;
+	left: 74%;
+	width: 18%;
+}
+
+.text-4 {
+	top: 57%;
+	left: 10%;
+	width: 40%;
+	transform: rotate(8deg);
+}
+
+.text-5 {
+	top: 9%;
+	left: 45%;
+}
+
+.text-6 {
+	top: 25%;
+	left: 72%;
+	width: 15%;
+	transform: rotate(-6deg);
+}
+
+.text-7 {
+	top: 35%;
+	left: 51%;
+	transform: rotate(-4deg);
+}
+
+.text-1:hover {
+	transform: translate(60px, 40px);
+}
+.text-2:hover {
+	transform: translate(-50px, 60px);
+}
+.text-3:hover {
+	transform: translate(-60px, -40px);
+}
+.text-4:hover {
+	transform: translate(50px, -50px);
+}
+.text-5:hover {
+	transform: translate(70px, 40px);
+}
+.text-6:hover {
+	transform: translate(-30px, 60px);
+}
+.text-7:hover {
+	transform: translate(-80px, -40px);
+}
+
+.bg-graph {
+	background-color: #ff00d8;
+	background-image: url(https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExNGYydDJxY3J4cjUwejB1bGJ0eThpZmIweXVxNDB2N2hndGJoamQwbyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/rTqDxxkzhhbFqoBA9g/giphy.gif);
+	background-blend-mode: multiply;
+	background-attachment: fixed;
+	background-size: 388px auto;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	color: white;
+}
+
+/* 그래프 영역 */
+.graph-container {
+	background-color: rgba(255, 0, 216, 0.8);
+	position: relative;
+	width: 800px; /* 그래프 전체 너비 */
+	height: 600px; /* 그래프 전체 높이 */
+	margin-bottom: 80px;
+}
+
+/* --- 십자가 선 만들기 --- */
+.cross-line-x {
+	position: absolute;
+	top: 50%;
+	left: 0;
+	width: 100%;
+	height: 2px;
+	background-color: white;
+}
+.cross-line-y {
+	position: absolute;
+	top: 0;
+	left: 50%;
+	width: 2px;
+	height: 100%;
+	background-color: white;
+}
+
+/* --- 축 라벨 위치 잡기 --- */
+.axis-label { position: absolute; font-size: 1.3rem; }
+.label-top { top: -50px; left: 50%; transform: translateX(-50%); }
+.label-bottom { bottom: -50px; left: 50%; transform: translateX(-50%); }
+.label-left { top: 50%; left: -100px; transform: translateY(-50%) rotate(-90deg); }
+.label-right { top: 50%; right: -110px; transform: translateY(-50%) rotate(90deg); }
+
+.axis-label:hover {
+	color: #0037ff;
+}
+.quadrants-grid {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 1fr 1fr;
+	width: 100%;
+	height: 100%;
+}
+.quadrant {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.blue-list {
+	list-style: none;
+	color: #0037ff;
+	font-size: 1.2rem;
+	text-align: right;
+}
+
+.quadrant:nth-child(even) .blue-list {
+	text-align: left; 
+}
+
+.tooltip {
+	position: absolute;
+	bottom: 10px;
+	left: -50%;
+	background-color: #fff;
+	color: #000;
+	border: 3px solid #000;
+	padding: 10px 10px;
+	width: 300px;
+	z-index: 100;
+	opacity: 0;
+	visibility: hidden;
+	transform: translateY(-30px);
+	transition: all 0.3s ease-out;
+}
+
+.tooltip-rotate {
+	position: absolute;
+	bottom: 10px;
+	left: -50%;
+	background-color: #fff;
+	color: #000;
+	border: 3px solid #000;
+	padding: 10px 10px;
+	width: 300px;
+	z-index: 100;
+	opacity: 0;
+	visibility: hidden;
+	transform: translateY(-30px) rotate(90deg);
+	transition: all 0.3s ease-out;
+}
+
+.tooltip-rotate2 {
+	position: absolute;
+	bottom: 10px;
+	left: -50%;
+	background-color: #fff;
+	color: #000;
+	border: 3px solid #000;
+	padding: 10px 10px;
+	width: 300px;
+	z-index: 100;
+	opacity: 0;
+	visibility: hidden;
+	transform: translateY(-30px) rotate(-90deg);
+	transition: all 0.3s ease-out;
+}
+
+/* 3. 텍스트에 마우스를 올렸을 때 빨간 박스 등장! */
+.label-top:hover .tooltip {
+	opacity: 1;
+	visibility: visible;
+	transform: translateY(-30px);
+}
+
+.label-bottom:hover .tooltip {
+	opacity: 1;
+	visibility: visible;
+	transform: translateY(-30px);
+}
+
+.label-left:hover .tooltip-rotate {
+	opacity: 1;
+	visibility: visible;
+	transform: translateY(-30px) rotate(90deg);
+}
+
+.label-right:hover .tooltip-rotate2 {
+	opacity: 1;
+	visibility: visible;
+	transform: translateY(-30px) rotate(-90deg);
+}
+
+.marquee-container {
+	width: 100%;
+	overflow: hidden;  
+	background-color: #111;
+	color: #ff00d8;
+	padding: 70px 0;
+	white-space: nowrap;
+}
+
+.marquee-container-blue {
+	width: 100%;
+	overflow: hidden;
+	background-color: #111;
+	color: #ff00d8;
+	padding: 30px 0;
+	white-space: nowrap;
+}
+
+.box-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 20px;
+}
+
+.marquee-content {
+	display: flex;
+	gap: 150px;
+	width: max-content;
+	animation: flow-right 10s linear infinite; 
+}
+
+.marquee-content-blue {
+	display: flex;
+	gap: 100px;
+	width: max-content;
+	animation: flow-right 8s linear infinite; 
+}
+
+@keyframes flow-right {
+	0% {transform: translateX(-50%);}
+	100% {transform: translateX(0);}
+}
+.bg-room {
+	background-color: #ff00d8;
+	background-blend-mode: multiply;
+	background-attachment: fixed;
+	color: white;
+	background-image: url(https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExMzd3cmF1ZWdxdTZkbmhjOXVkOHpoMDVqc2JicDk1Y3ZiOWluazUzZSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3o6ZtnK7QODWRkGbXW/giphy.gif);
+}
+
+.box-wrap {
+			display: flex;
+			gap: 50px;
+			justify-content: space-between;
+			padding: 0px 80px;
+		}
+
+.box {
+	flex: 1;
+	border-radius: 20px;
+	position: relative;
+	overflow: hidden;
+	box-shadow:
+		0 0 30px rgba(255,255,255,0.8),
+		0 0 40px rgba(255,255,255,0.6);
+	transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.box:hover {
+	transform: translateY(-6px) scale(1.03);
+	box-shadow:
+		0 0 30px rgba(255,255,255,0.8),
+		0 0 80px rgba(255,255,255,0.5),
+		0 16px 36px rgba(0,0,0,0.12);
+}
+
+.box img {
+	width: 100%;
+	height: 500px;
+	object-fit: cover;
+	display: block;
+	transition: filter 0.45s cubic-bezier(0.22, 1, 0.36, 1), transform 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.box:hover img {
+	filter: blur(4px) brightness(0.7);
+	transform: scale(1.04);
+}
+
+.box-overlay {
+	position: absolute;
+	inset: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 24px;
+	color: #ffffff;
+	font-size: 2rem;
+	font-weight: 500;
+	letter-spacing: 0.02em;
+	opacity: 0;
+	transform: translateY(10px);
+	transition: opacity 0.45s cubic-bezier(0.22, 1, 0.36, 1), transform 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+	pointer-events: none;
+}
+
+.box:hover .box-overlay {
+	opacity: 1;
+	transform: translateY(0);
+}
+
+
+/* 각 줄 */
+.bookshelf-row {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+/* 개별 책 */
+.book {
+    position: relative;
+    width: 180px;
+    height: 260px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.book img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    box-shadow: 
+        3px 3px 10px rgba(0, 0, 0, 0.3)
+}
+
+.book:hover {
+    transform: translateY(-15px);
+}
+
+/* 텍스트 오버레이 */
+.book-info {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 0, 216, 0.7);
+    color: white;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.book-info strong {
+    font-size: 1.1rem;
+}
+
+.book-info p {
+    font-size: 0.9rem;
+    color: #ccc;
+}
+
+.book:hover .book-info {
+    opacity: 1;
+}
+
+.bg-text p {
+	padding: 0.2em 0.4em;
+}
+
+.bg-text p:hover {
+	background-color: rgba(255, 0, 216, 0.7);
+	color: #0037ff;
+}

@@ -1,0 +1,102 @@
+@import url('fonts.css');
+
+html {
+	font-family: 'BookkMyungjo';
+	font-weight: 700;
+	font-size: 16px;
+	line-height: 1.8;
+	word-break: keep-all;
+}
+
+body,h1,h2,h3,h4,p,ul {
+	margin: 0px;
+	padding: 0px;
+}
+
+section {
+	background: #fff;
+	padding: 50px 0px 150px;
+}
+
+h1 {
+	font-size: 4.5rem;
+	font-weight: 700;
+	line-height: 1.4;
+	margin: 20px 0px 30px;
+}
+
+h2 {
+	font-family: 'BookkMyungjo';
+	font-size: 2.5rem;
+	font-weight: 700;
+	line-height: 1.4;
+	margin: 20px 0px 30px;
+}
+
+h3 {
+	font-family: 'BookkMyungjo';
+	font-size: 2.5rem;
+	font-weight: 700;
+}
+
+/* 텍스트 호버 */
+h4 {
+	font-family: 'BookkMyungjo';
+	font-size: 1rem;
+	font-weight: 700;
+	line-height: 1.6;
+}
+
+p {
+	font-family: 'BookkGothic';
+	font-size: 1.5rem;
+	font-weight: 700;
+	line-height: 2;
+}
+
+.wrap {
+	width: 1000px;
+	margin: auto;
+	position: relative;
+}
+
+.hover-line {
+	display: lock;
+	position: relative;
+  }
+  
+  .hover-line span {
+	display: inline-block;
+	font-size: 3rem;
+	line-height: 2;
+  }
+  
+  .hover-line .hover {
+	position: absolute;
+	left: 0;
+	top: 0;
+	opacity: 0;
+  }
+  
+  .hover-line:hover .default {
+	opacity: 0;
+  }
+  
+  .hover-line:hover .hover {
+	opacity: 1;
+  }
+
+.back-btn {
+	position: fixed;
+	right: 110px;
+	bottom: 80px;
+	font-size: 4rem;
+	text-decoration: none;
+	color: black;
+	z-index: 9999;
+	transition: transform 0.3s;
+}
+
+.back-btn:hover {
+	transform: translateX(-8px);
+}
