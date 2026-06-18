@@ -15,53 +15,109 @@ body,h1,h2,h3,h4,p,ul {
 
 section {
 	background: #fff;
-	padding: 50px 0px 150px;
+	padding: 150px 0px ;
 }
 
 h1 {
-	font-size: 4.5rem;
+	font-size: 2.5rem;
 	font-weight: 700;
-	line-height: 1.4;
-	margin: 20px 0px 30px;
+	line-height: 1.5;
+	margin: 80px 0px 30px;
 }
 
 h2 {
 	font-family: 'BookkMyungjo';
-	font-size: 2.5rem;
-	font-weight: 700;
-	line-height: 1.4;
-	margin: 20px 0px 30px;
-}
-
-h3 {
-	font-family: 'BookkMyungjo';
-	font-size: 2.5rem;
-	font-weight: 700;
-}
-
-/* 텍스트 호버 */
-h4 {
-	font-family: 'BookkMyungjo';
 	font-size: 1rem;
 	font-weight: 700;
 	line-height: 1.6;
-}
-
-p {
-	font-family: 'BookkGothic';
-	font-size: 1.5rem;
-	font-weight: 700;
-	line-height: 2;
+	margin: 5px 0px 20px;
 }
 
 .wrap {
-	width: 1000px;
+	width: 1100px;
 	margin: auto;
 	position: relative;
 }
 
+.poster-wrap {
+	position: relative;
+	width: fit-content;
+	margin: auto;
+}
+
+.center-gif {
+	display: block;
+	width: 300px; /* 원하는 크기 */
+	margin: auto;
+}
+
+.left-text,
+.right-text {
+	position: absolute;
+	top: 50%;
+	white-space: nowrap;
+	transform-origin: center;
+	text-align: center;
+}
+
+.left-text {
+	left: -400px;
+	transform: translateY(-50%) rotate(-90deg);
+	transition: all 0.3s ease;
+}
+
+.left-text:hover {
+	color: blue;
+	transform: translateY(-50%) rotate(-82deg);
+}
+
+.right-text {
+	right: -400px;
+	transform: translateY(-50%) rotate(90deg);
+	transition: all 0.3s ease;
+}
+
+.right-text:hover {
+	color: blue;
+	transform: translateY(-50%) rotate(98deg);
+}
+
+.center-gif {
+	display: block;
+	margin: 0 auto;
+}
+
+.right-spacing {
+	text-align: right;
+}
+
+.center-spacing {
+	text-align: center;
+}
+
+.bg-black {
+	background-color: black;
+	color: #fff;
+}
+
+.bg-top {
+	background-attachment: fixed;
+	background-color: blue;
+	background-size: 300px auto;
+	color: #fff;
+	background-blend-mode: multiply;
+	background-image: url(https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExOGp3ZmxmdTIzNHJ3OGtuYjc1OGxtejQ1dTUxNHE0NW8zZWgyZHpjYSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/9zsaIn7RYPCnuehzLT/giphy.gif);
+}
+
+.inline-img {
+	display: inline;
+	height: 1.5em;
+	width: auto;
+	vertical-align: middle;
+}
+
 .hover-line {
-	display: lock;
+	display: block;
 	position: relative;
   }
   
@@ -76,6 +132,9 @@ p {
 	left: 0;
 	top: 0;
 	opacity: 0;
+	font-size: 2.9rem;
+	font-family: 'BookkGothic';
+	color: blue;
   }
   
   .hover-line:hover .default {
