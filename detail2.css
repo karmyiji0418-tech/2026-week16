@@ -161,7 +161,7 @@ h4 {
 }
 
 .bg-text h2:hover {
-	background-color: rgb(255, 92, 33);
+	background-color: rgba(255, 92, 33, 0.5);
 	color: rgb(127, 255, 0);
 }
 
