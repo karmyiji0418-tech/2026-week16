@@ -44,7 +44,7 @@ h4 {
 	font-family: 'BookkMyungjo';
 	font-size: 1rem;
 	font-weight: 300;
-	line-height: 1.4;
+	line-height: 1.6;
 }
 
 p {
@@ -80,6 +80,10 @@ nav a {
 	color: #111;
 }
 
+nav img {
+	display: block;
+}
+
 nav ul li a {
 	text-decoration: none;
 	display: block;
@@ -91,6 +95,7 @@ nav ul li a {
 nav ul li a:hover {
 	color: whitesmoke;
 	background: #111;
+	transition: all 0.5s;
 }
 
 nav > .flex {
@@ -255,10 +260,10 @@ ul.flex {
 }
 
 .text-1:hover {
-	transform: translate(60px, 40px);
+	transform: translate(40px, -40px);
 }
 .text-2:hover {
-	transform: translate(-50px, 60px);
+	transform: translate(-50px, -60px);
 }
 .text-3:hover {
 	transform: translate(-60px, -40px);
@@ -463,9 +468,10 @@ ul.flex {
 }
 
 @keyframes flow-right {
-	0% {transform: translateX(-50%);}
-	100% {transform: translateX(0);}
+	0% {transform: translateX(0%);}
+	100% {transform: translateX(-50%);}
 }
+
 .bg-room {
 	background-color: #ff00d8;
 	background-blend-mode: multiply;
