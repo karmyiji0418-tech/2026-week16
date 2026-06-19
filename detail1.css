@@ -100,15 +100,6 @@ h2 {
 	color: #fff;
 }
 
-.bg-top {
-	background-attachment: fixed;
-	background-color: blue;
-	background-size: 300px auto;
-	color: #fff;
-	background-blend-mode: multiply;
-	background-image: url(https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExOGp3ZmxmdTIzNHJ3OGtuYjc1OGxtejQ1dTUxNHE0NW8zZWgyZHpjYSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/9zsaIn7RYPCnuehzLT/giphy.gif);
-}
-
 .inline-img {
 	display: inline;
 	height: 1.5em;
