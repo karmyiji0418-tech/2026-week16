@@ -17,6 +17,25 @@ body,h1,h2,h3,h4,p,ul {
 
 body {
 	overflow-x: clip;
+	cursor: none;
+}
+
+html, body, a, img, button, input, textarea, select,
+* {
+	cursor: none !important;
+}
+
+.cursor {
+	width: 16px;
+	height: 16px;
+	background: aqua;
+	border-radius: 50%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	transform: translate(-50%, -50%);
+	pointer-events: none;
+	z-index: 9999;
 }
 
 section {

@@ -5,8 +5,10 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="styles.css">
 	<title>숨는게왜나빠</title>
+	<link rel="icon" type="image/png" href="head.png">
 </head>
 <body>
+	<div class="cursor"></div>
 	<nav>
 		<div class="flex">
 			<ul class>
@@ -352,3 +354,28 @@
 	</script>
 </body>
 </html>
+<script>
+	const cursor = document.querySelector(".cursor");
+
+	let mouseX = 0;
+	let mouseY = 0;
+	let x = 0;
+	let y = 0;
+
+	document.addEventListener("mousemove", (e) => {
+		mouseX = e.clientX;
+		mouseY = e.clientY;
+	});
+
+	function animate() {
+		x += (mouseX - x) * 0.15;
+		y += (mouseY - y) * 0.15;
+
+		cursor.style.left = x + "px";
+		cursor.style.top = y + "px";
+
+		requestAnimationFrame(animate);
+	}
+
+	animate();
+</script>
